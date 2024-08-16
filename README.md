@@ -1,3 +1,17 @@
+## Modified
+
+1. add ``openvoice/openvoice_app2.py`` for v2, gradio demo
+   ``GRADIO_SERVER_NAME=0.0.0.0 python openvoice/openvoice_app2.py``
+3. ``Could not load library libcudnn_cnn_infer.so.8`` problem
+  ```
+  Could not load library libcudnn_cnn_infer.so.8. Error: libcudnn_cnn_infer.so.8: cannot open shared object file: No such file or directory
+  Please make sure libcudnn_cnn_infer.so.8 is in your library path!
+  Aborted (core dumped)
+  ```
+  - ``find ~ -name "libcudnn_cnn_infer.so.8"``
+  - ``export LD_LIBRARY_PATH=/home/{username}/miniconda3/envs/{envname}/lib/python3.9/site-packages/nvidia/cudnn/lib:$LD_LIBRARY_PATH``
+
+
 <div align="center">
   <div>&nbsp;</div>
   <img src="resources/openvoicelogo.jpg" width="400"/> 
